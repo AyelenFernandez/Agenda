@@ -1,0 +1,64 @@
+table{
+	border-collapse: collapse;
+}
+
+.logo_fix{
+	width: 500px;
+	height: 70px;
+	text-align: center;
+}
+
+.sin_borde{
+	border: 0;
+}
+
+.centrado{
+	text-align: center;
+}
+
+.negrita{
+	font-weight: bold;
+}
+
+.firma{
+	padding: 0 20px;
+	
+}
+
+.izq{
+	text-align: left;
+}
+
+.ajuste{
+	display: table-cell;
+    width: 1px;
+    white-space:nowrap;
+}
+
+td{
+	padding: 2 7px,
+}
+
+
+/* }
+
+#tabla{
+	width: 200px;
+
+#organizador{
+	width: 50px;
+}
+
+#evento{
+	width: 200px;
+}
+
+#Horario{
+	width: 120px;
+}
+
+#Fecha{
+	width: 150px;
+}
+
+ */

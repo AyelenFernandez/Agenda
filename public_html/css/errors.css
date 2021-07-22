@@ -1,0 +1,31 @@
+body {
+  background: url("../img/ciidept.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  height: 100vh; }
+  body .msg {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; }
+    body .msg .msg-title p {
+      padding-top: 10vh;
+      font-size: 38px;
+      font-family: Lato;
+      font-weight: bold;
+      text-shadow: 2px 3px 2px #ccc; }
+    body .msg .msg-back {
+      font-size: 24px;
+      font-weight: bold; }
+      body .msg .msg-back a {
+        text-decoration: none;
+        color: #111111;
+        text-shadow: 1px 2px 1px #fff; }
+        body .msg .msg-back a:active, body .msg .msg-back a:visited {
+          color: #111111; }
+        body .msg .msg-back a:hover {
+          color: #3C8DBC; }
+
+/*# sourceMappingURL=errors.css.map */

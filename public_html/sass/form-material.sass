@@ -1,0 +1,231 @@
+@mixin prefijos($propiedad, $valor)
+	-webkit-#{$propiedad}: $valor
+	-moz-#{$propiedad}: $valor
+	-o-#{$propiedad}: $valor
+	-ms-#{$propiedad}: $valor
+	#{$propiedad}: $valor
+
+@mixin box-flex($direction, $content)
+	display: flex
+	flex-direction: $direction
+	justify-content: $content
+	flex-wrap: wrap
+
+$blanco: #fff
+$negro: #000
+$white: #F2F2F2
+$black: #111111
+$gray: #AAAAAA
+$primary: #1464B4
+$success: #329614
+$error: #C81432
+$info: lighten($primary, 10)
+$alert: lighten($error, 10)
+$light-primary: lighten($primary, 20)
+$light-success: lighten($success, 20)
+$light-error: lighten($error, 20)
+$light-info: lighten($info, 20)
+$light-alert: lighten($alert, 20)
+
+$divider: $gray
+
+$border: 2px
+$font-size-1: 12px
+$font-size-2: 14px
+$font-size-3: 16px
+$font-family: "Roboto", Arial
+$btn-hover: #1976D2
+
+
+
+$color-base-checkbox: #1BA39C
+$color-base-radio: #2AB4C0
+$color-i: #1BA39C
+
+.wrap
+	margin: 0 auto
+.cont-form-material
+	color: #2F353B //$primary
+	text-shadow: 0px 1px 0px rgba(#1BA39C, 0.3)
+	padding: 10px
+	.form-material
+		width: 100%
+		margin: 0 auto
+		.input_group_material
+			position: relative
+			margin-bottom: 32px
+			&.checkbox-material label
+				border: solid 2px $color-base-checkbox
+				color: $negro
+				border-radius: 3px
+			&.radio-material label
+				border: solid 1px lighten($color-base-radio, 30) 
+				color: $negro
+				border-radius: 3px
+			&.checkbox-material label,
+			&.radio-material label
+				display: inline-block
+				cursor: pointer
+				position: relative
+				padding: 5px 10px
+				border-radius: 3px
+				margin: 5px
+				width: 150px
+				+prefijos(transition, all .3s ease)
+				&:hover
+					background: rgba($color-base-checkbox, 0.3)
+					color: $negro
+				&:before
+					content: ""
+					display: inline-flex
+					position: absolute
+					left: 10px
+					background: none
+			&.error
+				label
+					color: $error
+					&:hover
+						background: rgba($error, .2)
+					&:before
+						border: solid $border $error
+			&.radio-material
+				input[type="radio"]
+					display: none
+					&:checked + label:before
+						display: none
+					&:checked + label
+						padding: 5px 10px
+						background: lighten($color-base-radio, 30)
+						border-radius: $border
+						color: $negro
+						-webkit-box-shadow: 1px 1px 1px 2px #ccc
+						box-shadow: 1px 1px 1px 2px #ccc
+			&.checkbox-material
+				input[type="checkbox"]
+					display: none
+					text-align: center
+					&:checked + label:before
+						display: none
+					&:checked + label
+						background: rgba($color-base-checkbox, 0.8)
+						color: $blanco
+						padding: 5px 10px
+						-webkit-box-shadow: 1px 1px 1px 2px #ccc
+						box-shadow: 1px 1px 1px 2px #ccc
+		input[type="submit"]
+			border: solid 1px $primary
+			color: $primary
+			border-radius: 3px
+			&:hover, &:focus
+				background: $primary
+				color: #fff
+		.bt-s-c
+			button
+				border: solid 2px #5C9BD1
+				color: black
+				background: none
+				border-radius: 5px
+				padding: 5px 10px
+				margin-right: 10px
+				&:hover
+					background: lighten(#5C9BD1, 20)
+			a
+				border: solid 2px #ccc
+				color: black
+				background: none
+				border-radius: 5px
+				padding: 6px 10px
+				margin-right: 10px
+				&:hover
+					background: lighten(#ccc, 5)
+
+@media screen and (max-width: 480px)
+	.mxs
+		width: 100%
+	.cont-form-material
+		padding: 4px
+		.form-material
+			.input_group_material
+				&.checkbox-material label, 
+				&.radio-material label
+					width: 90vw !important
+					text-align: center
+
+
+
+// .wrap
+// 	margin: 0 auto
+// .cont-form-material
+// 	color: $primary
+// 	padding: 10px
+// 	.form-material
+// 		width: 100%
+// 		margin: 0 auto
+// 		.input_group_material
+// 			position: relative
+// 			margin-bottom: 32px
+// 			&.checkbox-material label,
+// 			&.radio-material label
+// 				display: inline-block
+// 				cursor: pointer
+// 				color: $primary
+// 				position: relative
+// 				padding: 5px 10px//5px 15px 7px 35px
+// 				border-radius: 3px
+// 				margin: 5px
+// 				+prefijos(transition, all .3s ease)
+// 				&:hover
+// 					background: rgba($light-primary, 1)
+// 					color: $blanco
+// 				&:before
+// 					content: ""
+// 					display: inline-block
+// 					// width: $font-size-3
+// 					// height: $font-size-3
+// 					position: absolute
+// 					left: 10px
+// 					// border-radius: 50%
+// 					background: none
+// 					// border: solid $border $primary
+// 			&.error
+// 				label
+// 					color: $error
+// 					&:hover
+// 						background: rgba($error, .2)
+// 					&:before
+// 						border: solid $border $error
+// 			&.radio-material
+// 				input[type="radio"]
+// 					display: none
+// 					&:checked + label:before
+// 						display: none
+// 					&:checked + label
+// 						padding: 5px 10px
+// 						background: $primary
+// 						border-radius: $border
+// 						color: $white
+// 			&.checkbox-material
+// 				// label:before
+// 				// 	border-radius: 3px
+// 				input[type="checkbox"]
+// 					display: none
+// 					text-align: center
+// 					&:checked + label:before
+// 						display: none
+// 						// border-radius: 3px
+// 					&:checked + label
+// 						background: $primary
+// 						color: $white
+// 						padding: 5px 10px
+// 		input[type="submit"]
+// 			border: solid 1px $primary
+// 			background: none
+// 			color: $primary
+// 			border-radius: 3px
+// 			&:hover, &:focus
+// 				background: $primary
+// 				color: #fff
+
+// // @media (max-width: 768px)
+// // 	body
+// // 		font-size: 8px

@@ -1,0 +1,108 @@
+.wrap {
+  margin: 0 auto; }
+
+.cont-form-material {
+  color: #2F353B;
+  text-shadow: 0px 1px 0px rgba(27, 163, 156, 0.3);
+  padding: 10px; }
+  .cont-form-material .form-material {
+    width: 100%;
+    margin: 0 auto; }
+    .cont-form-material .form-material .input_group_material {
+      position: relative;
+      margin-bottom: 32px; }
+      .cont-form-material .form-material .input_group_material.checkbox-material label {
+        border: solid 2px #1BA39C;
+        color: #000;
+        border-radius: 3px; }
+      .cont-form-material .form-material .input_group_material.radio-material label {
+        border: solid 1px #9ae3e9;
+        color: #000;
+        border-radius: 3px; }
+      .cont-form-material .form-material .input_group_material.checkbox-material label, .cont-form-material .form-material .input_group_material.radio-material label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin: 5px;
+        width: 150px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .cont-form-material .form-material .input_group_material.checkbox-material label:hover, .cont-form-material .form-material .input_group_material.radio-material label:hover {
+          background: rgba(27, 163, 156, 0.3);
+          color: #000; }
+        .cont-form-material .form-material .input_group_material.checkbox-material label:before, .cont-form-material .form-material .input_group_material.radio-material label:before {
+          content: "";
+          display: inline-flex;
+          position: absolute;
+          left: 10px;
+          background: none; }
+      .cont-form-material .form-material .input_group_material.error label {
+        color: #C81432; }
+        .cont-form-material .form-material .input_group_material.error label:hover {
+          background: rgba(200, 20, 50, 0.2); }
+        .cont-form-material .form-material .input_group_material.error label:before {
+          border: solid 2px #C81432; }
+      .cont-form-material .form-material .input_group_material.radio-material input[type="radio"] {
+        display: none; }
+        .cont-form-material .form-material .input_group_material.radio-material input[type="radio"]:checked + label:before {
+          display: none; }
+        .cont-form-material .form-material .input_group_material.radio-material input[type="radio"]:checked + label {
+          padding: 5px 10px;
+          background: #9ae3e9;
+          border-radius: 2px;
+          color: #000;
+          -webkit-box-shadow: 1px 1px 1px 2px #ccc;
+          box-shadow: 1px 1px 1px 2px #ccc; }
+      .cont-form-material .form-material .input_group_material.checkbox-material input[type="checkbox"] {
+        display: none;
+        text-align: center; }
+        .cont-form-material .form-material .input_group_material.checkbox-material input[type="checkbox"]:checked + label:before {
+          display: none; }
+        .cont-form-material .form-material .input_group_material.checkbox-material input[type="checkbox"]:checked + label {
+          background: rgba(27, 163, 156, 0.8);
+          color: #fff;
+          padding: 5px 10px;
+          -webkit-box-shadow: 1px 1px 1px 2px #ccc;
+          box-shadow: 1px 1px 1px 2px #ccc; }
+    .cont-form-material .form-material input[type="submit"] {
+      border: solid 1px #1464B4;
+      color: #1464B4;
+      border-radius: 3px; }
+      .cont-form-material .form-material input[type="submit"]:hover, .cont-form-material .form-material input[type="submit"]:focus {
+        background: #1464B4;
+        color: #fff; }
+    .cont-form-material .form-material .bt-s-c button {
+      border: solid 2px #5C9BD1;
+      color: black;
+      background: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-right: 10px; }
+      .cont-form-material .form-material .bt-s-c button:hover {
+        background: #accce7; }
+    .cont-form-material .form-material .bt-s-c a {
+      border: solid 2px #ccc;
+      color: black;
+      background: none;
+      border-radius: 5px;
+      padding: 6px 10px;
+      margin-right: 10px; }
+      .cont-form-material .form-material .bt-s-c a:hover {
+        background: #d9d9d9; }
+
+@media screen and (max-width: 480px) {
+  .mxs {
+    width: 100%; }
+
+  .cont-form-material {
+    padding: 4px; }
+    .cont-form-material .form-material .input_group_material.checkbox-material label, .cont-form-material .form-material .input_group_material.radio-material label {
+      width: 90vw !important;
+      text-align: center; } }
+
+/*# sourceMappingURL=form-material.css.map */

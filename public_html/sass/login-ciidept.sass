@@ -1,0 +1,121 @@
+@mixin prefijos($propiedad, $valor)
+    -webkit-#{$propiedad}: $valor
+    -moz-#{$propiedad}: $valor
+    -o-#{$propiedad}: $valor
+    -ms-#{$propiedad}: $valor
+    #{$propiedad}: $valor
+
+@mixin box-flex($direction, $content)
+    display: flex
+    flex-direction: $direction
+    justify-content: $content
+    flex-wrap: wrap
+
+$blanco: #fff
+$negro: #000
+$white: #F2F2F2
+$black: #111111
+$gray: #AAAAAA
+$primary: #1464B4
+$success: #329614
+$error: #C81432
+$info: lighten($primary, 10)
+$alert: lighten($error, 10)
+$light-primary: lighten($primary, 20)
+$light-success: lighten($success, 20)
+$light-error: lighten($error, 20)
+$light-info: lighten($info, 20)
+$light-alert: lighten($alert, 20)
+
+$divider: $gray
+
+$border: 2px
+$font-size-1: 12px
+$font-size-2: 14px
+$font-size-3: 16px
+$font-family: "Roboto", Arial
+$btn-hover: #1976D2
+*
+    +prefijos(box-sizing, border-box)
+body
+    background: url('../img/ciidept.jpg') no-repeat center
+    +prefijos(background-size, cover)
+    height: 100vh
+.form-log
+    width: 300px
+    margin: 60px auto 30px
+    padding: 10px
+    position: relative
+    font-family: $font-family
+    color: $blanco
+    text-shadow: 0 2px 1px rgba(0,0,0,1)
+.form-log h1
+    font-size: 22px
+    padding-bottom: 20px
+.form-log input[type=email],
+.form-log input[type=password]
+    width: 100%
+    padding: 8px 4px 8px 10px
+    margin-bottom: 15px
+    border: 1px solid #4e3043 
+    border: 1px solid rgba(78,48,67, 0.8)
+    background: rgba(0,0,0,0.15)
+    border-radius: 2px
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2), inset 0 1px 1px rgba(0,0,0,0.1)
+    font-family: $font-family
+    color: $black
+    font-size: 13px
+    +prefijos(transition, all 0.3s ease-out)
+.form-log input::-webkit-input-placeholder
+    color: rgba(37,21,26,0.5)
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15)
+.form-log input:-moz-placeholder
+    color: rgba(37,21,26,0.5)
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15)
+.form-log input:-ms-input-placeholder
+    color: rgba(37,21,26,0.5)
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15)
+    
+.form-log input[type=email]:hover,
+.form-log input[type=password]:hover
+    border-color: #333
+.form-log input[type=email]:focus,
+.form-log input[type=password]:focus,
+.form-log input[type=submit]:focus
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2), inset 0 1px 1px rgba(0,0,0,0.1), 0 0 0 3px rgba(255,255,255,0.15)
+    outline: none
+.no-boxshadow .form-log input[type=email]:focus,
+.no-boxshadow .form-log input[type=password]:focus
+    outline: 1px solid white
+.form-log input[type=submit]
+    width: 100%
+    padding: 8px 5px
+    background: #634056
+    background: -moz-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7))
+    background: -ms-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7))
+    background: -o-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7))
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(99,64,86,0.5)), to(rgba(76,49,65,0.7)))
+    background: -webkit-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7))
+    background: linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7))    
+    border-radius: 5px
+    border: 1px solid #4e3043
+    box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 2px 1px rgba(0,0,0,0.1)
+    cursor: pointer
+    color: $black
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3)
+    font-size: 16px
+    font-weight: bold
+    font-family: $font-family
+    +prefijos(transition, all 0.3s ease-out)
+.form-log input[type=submit]:hover
+    box-shadow: inset 0 1px rgba(255,255,255,0.2), inset 0 20px 30px rgba(99,64,86,0.5)
+.no-boxshadow .form-log input[type=submit]:hover
+    background: #594642
+.form-log label
+    display: none
+    padding: 0 0 5px 2px
+    cursor: pointer
+.form-log label:hover ~ input
+    border-color: #333
+.no-placeholder .form-log label
+    display: block
